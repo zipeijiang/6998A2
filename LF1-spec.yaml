@@ -1,0 +1,33 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: CD Demo Lambda
+Resources:
+  CDDemoLambda:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: CF-photo-LF1
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.8
+      CodeUri: ./LF1/LF1.zip
+      Description: 'Index Function'
+      MemorySize: 128
+      Timeout: 30
+      Role: 'arn:aws:iam::682475076944:role/photo-LF'
+      Environment:
+        Variables:
+          REGION: us-east-1
+  LF2Lambda:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      FunctionName: CF-photo-LF2
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.8
+      CodeUri: ./LF2/LF2.zip
+      Description: 'Search Function'
+      MemorySize: 128
+      Timeout: 30
+      Role: 'arn:aws:iam::682475076944:role/photo-LF'
+      Environment:
+        Variables:
+          REGION: us-east-1
+
