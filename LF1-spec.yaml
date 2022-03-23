@@ -12,7 +12,7 @@ Resources:
       Description: 'Index Function'
       MemorySize: 128
       Timeout: 30
-      Role: 'arn:aws:iam::682475076944:role/photo-LF'
+      Role: 'arn:aws:iam::577172093916:role/service-role/index-photos-role-wcsi16px'
       Environment:
         Variables:
           REGION: us-east-1
@@ -26,7 +26,7 @@ Resources:
       Description: 'Search Function'
       MemorySize: 128
       Timeout: 30
-      Role: 'arn:aws:iam::682475076944:role/photo-LF'
+      Role: 'arn:aws:iam::577172093916:role/service-role/search-photos-role-j7m1sqyk'
       Environment:
         Variables:
           REGION: us-east-1
