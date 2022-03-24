@@ -38,7 +38,7 @@ def es_search(keyword):
 
 def post_lex(text):
     response = lex_client.post_text(
-        botName="photo_keyword_key",
+        botName="photo",
         botAlias="alpha",
         userId=str(time.time()),
         inputText=text)
